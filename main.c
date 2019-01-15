@@ -66,7 +66,7 @@ int main()
 
             for (int i = 0; i < index; i++)
             {
-                printf("第%d个敏感字符为%c\n", i+1, arr[i]);
+                printf("第%d个敏感字符为%c\n", i + 1, arr[i]);
             }
 
             printf("显示成功，点击回车继续\n");
@@ -76,6 +76,33 @@ int main()
         }
         if (code == 4)
         {
+            printf("请输入一段英文：\n");
+            char neirong[1024];
+
+            scanf("%s", neirong);
+
+            for (int i = 0; 1; i++)
+            {
+
+                if (neirong[i] == '\0')
+                {
+                    break;
+                }
+
+                if (isMingan(arr[i]) == 1)
+                {
+                    neirong[i] = '*';
+                }
+
+                printf("%c", neirong[i]);
+            }
+
+            printf("\n");
+
+            printf("替换完成，点击回车继续\n");
+            char x;
+            scanf("%c", &x);
+            scanf("%c", &x);
         }
         if (code == 5)
         {
