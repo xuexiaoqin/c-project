@@ -1,6 +1,20 @@
 #include <stdio.h>
 char arr[1024];
 int index = 0;
+int isMingan(char x){
+    int count=0;
+    for(int i=0;i<index;i++){
+        if(x == arr[i]){
+            count++;
+        }
+    }
+    if(count == 0){
+        return 0;
+    }
+    else{
+        return 1;
+    }
+}
 
 int main()
 {
@@ -25,6 +39,7 @@ int main()
             scanf("%c", &a);
 
             arr[index] = a;
+            index++;
             printf("添加成功，点击回车继续\n");
 
             char x;
@@ -33,6 +48,13 @@ int main()
         }
         if (code == 2)
         {
+            printf("删除最后一个敏感词\n");
+            index--;
+            printf("删除成功，点击回车继续\n");
+            char x;
+            scanf("%c",&x);
+            scanf("%c",&x);
+
         }
         if (code == 3)
         {
